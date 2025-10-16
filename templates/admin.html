@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="text-center mb-5">
+        <h1 class="display-4">Panneau d'Administration</h1>
+        <p class="lead">Gérez les étudiants et les utilisateurs de la plateforme.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="list-group">
+                <a href="{{ url_for('students') }}" class="list-group-item list-group-item-action py-3">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Voir et Gérer les Étudiants</h5>
+                        <small><i class="bi bi-chevron-right"></i></small>
+                    </div>
+                    <p class="mb-1">Accéder à la liste complète des étudiants, modifier leurs profils ou les supprimer.</p>
+                </a>
+                <a href="{{ url_for('add_student') }}" class="list-group-item list-group-item-action py-3">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Ajouter un Nouvel Étudiant</h5>
+                        <small><i class="bi bi-chevron-right"></i></small>
+                    </div>
+                    <p class="mb-1">Enregistrer un nouvel étudiant sur la plateforme.</p>
+                </a>
+                <!-- Ajoutez d'autres liens d'administration ici si nécessaire -->
+                <a href="#" class="list-group-item list-group-item-action py-3 text-muted disabled">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Statistiques (à venir)</h5>
+                        <small><i class="bi bi-chevron-right"></i></small>
+                    </div>
+                    <p class="mb-1">Consulter les statistiques de la plateforme.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
